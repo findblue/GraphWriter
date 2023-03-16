@@ -1,7 +1,7 @@
 import torch
 from collections import Counter
 import dill
-from torchtext import data
+from torchtext.legacy import data
 import pargs as arg
 from copy import copy
 
@@ -24,7 +24,7 @@ class dataset:
 
   def build_ent_vocab(self,path,unkat=0):
     ents = ""
-    with open(path) as f:
+    with open(path,encoding='utf-8') as f:
       for l in f:
         ents +=  " "+l.split("\t")[1]
     itos = sorted(list(set(ents.split(" "))))

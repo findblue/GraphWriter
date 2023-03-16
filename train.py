@@ -85,6 +85,7 @@ def main(args):
   args = dynArgs(args,ds)
   m = model(args)
   print(args.device)
+
   m = m.to(args.device)
   if args.ckpt:
     '''
