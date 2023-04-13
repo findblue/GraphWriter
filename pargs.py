@@ -39,7 +39,7 @@ def pargs():
   # training and loss
   parser.add_argument("-cl",default=None,type=float,help="Coverage loss")
   parser.add_argument("-bsz",default=32,type=int)
-  parser.add_argument("-epochs",default=20,type=int)
+  parser.add_argument("-epochs",default=33,type=int)
   parser.add_argument("-clip",default=1,type=float,help='clip grads')
   parser.add_argument("-t1size",default=32,type=int,help="batch size for short targets")
   parser.add_argument("-t2size",default=16,type=int,help="batch size for medium length targets")

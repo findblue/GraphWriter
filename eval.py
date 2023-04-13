@@ -18,12 +18,12 @@ class Evaluate(object):
         ]#,        (Cider(), "CIDEr")
 
     def convert(self, data):
-        if isinstance(data, basestring):
+        if isinstance(data, str):
             return data.encode('utf-8')
         elif isinstance(data, collections.Mapping):
-            return dict(map(convert, data.items()))
+            return dict(map(self.convert, data.items()))
         elif isinstance(data, collections.Iterable):
-            return type(data)(map(convert, data))
+            return type(data)(map(self.convert, data))
         else:
             return data
 
